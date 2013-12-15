@@ -3246,14 +3246,6 @@
 							<string key="candidateClassName">UIImageView</string>
 						</object>
 					</dictionary>
-					<object class="NSMutableDictionary" key="toManyOutletInfosByName">
-						<string key="NS.key.0">Drag</string>
-						<object class="IBToManyOutletInfo" key="NS.object.0">
-							<string key="name">Drag</string>
-							<string key="candidateClassName">UIImageView</string>
-							<string key="collectionClassName">NSArray</string>
-						</object>
-					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">./Classes/ViewController.h</string>

@@ -116,6 +116,7 @@
 @property (strong, nonatomic) IBOutlet UIImageView *masterHole3;
 @property (strong, nonatomic) IBOutlet UIImageView *masterHole4;
 
+-(void)ifCollided;
 
 
 
