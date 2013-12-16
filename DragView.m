@@ -48,7 +48,7 @@
     
 //    NSString *cheese = [[NSString alloc] init];
 //    cheese = @"delegate.viewController.hole11.frame";
-    
+
 //    if(CGRectIntersectsRect(self.frame, delegate.viewController.hole11.frame))
 //    {
 //        delegate.viewController.hole11.frame = CGRectMake(delegate.viewController.hole11.frame.origin.x,
@@ -82,7 +82,7 @@
 //        delegate.viewController.hole14.center = delegate.viewController.hole14.superview.center;
 //        delegate.viewController.hole14.image = [UIImage imageNamed: @"greenPeg.png"];
 //    }
-    
+
 }
 
 @end

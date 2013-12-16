@@ -112,6 +112,8 @@
     NSMutableArray *turns = [[NSMutableArray alloc] initWithCapacity:10];
     
     NSMutableArray *turn0 = [[NSMutableArray alloc] initWithCapacity:8];
+    UIImageView *hole11 = [[UIImageView alloc] initWithFrame:CGRectMake(67, 99, 10, 10)]; [self.view addSubview:hole11];
+    
     
     [turns addObject:turn0];
     
@@ -312,7 +314,7 @@
 }
 
 -(NSString *)hurlInsult{
-    [self initializeInsults];
+    NSMutableArray *i = [self initializeInsults];
     
     //set numCorrect and turnCount for testing
     int numCorrect = 2;
@@ -324,38 +326,38 @@
 
     //insult to hurl if none are correct
     if (numCorrect == 0 && turnCount <10) {
-        insult = arc4random() % [[[self initializeInsults] objectAtIndex:0] count];
-        angryText = [[[self initializeInsults] objectAtIndex:0] objectAtIndex:insult];
+        insult = arc4random() % [[i objectAtIndex:0] count];
+        angryText = [[i objectAtIndex:0] objectAtIndex:insult];
     }
     
     //insult to hurl if one is correct
     else if (numCorrect == 1 && turnCount <10) {
-        insult = arc4random() % [[[self initializeInsults] objectAtIndex:1] count];
-        angryText = [[[self initializeInsults] objectAtIndex:1] objectAtIndex:insult];
+        insult = arc4random() % [[i objectAtIndex:1] count];
+        angryText = [[i objectAtIndex:1] objectAtIndex:insult];
     }
 
     //insult to hurl if two pegs are correct
     else if (numCorrect == 2 && turnCount <10) {
-        insult = arc4random() % [[[self initializeInsults] objectAtIndex:2] count];
-        angryText = [[[self initializeInsults] objectAtIndex:2] objectAtIndex:insult];
+        insult = arc4random() % [[i objectAtIndex:2] count];
+        angryText = [[i objectAtIndex:2] objectAtIndex:insult];
     }
 
     //insult to hurl if three pegs are correct
     else if (numCorrect == 3 && turnCount <10) {
-        insult = arc4random() % [[[self initializeInsults] objectAtIndex:3] count];
+        insult = arc4random() % [[i objectAtIndex:3] count];
         angryText = [[[self initializeInsults] objectAtIndex:3] objectAtIndex:insult];
     }
     
     //insult to hurl if all pegs are correct and player wins
     else if (numCorrect == 4) {
-        insult = arc4random() % [[[self initializeInsults] objectAtIndex:4] count];
-        angryText = [[[self initializeInsults] objectAtIndex:4] objectAtIndex:insult];
+        insult = arc4random() % [[i objectAtIndex:4] count];
+        angryText = [[i objectAtIndex:4] objectAtIndex:insult];
     }
 
     //insult to hurl if player loses by running out of turns
     else if (turnCount == 10 && numCorrect != 4) {
-        insult = arc4random() % [[[self initializeInsults] objectAtIndex:5] count];
-        angryText = [[[self initializeInsults] objectAtIndex:5] objectAtIndex:insult];
+        insult = arc4random() % [[i objectAtIndex:5] count];
+        angryText = [[i objectAtIndex:5] objectAtIndex:insult];
     }
     
     //return which insult to hurl
