@@ -13,11 +13,11 @@
 @property (strong, nonatomic) IBOutlet UIImageView *goButton;
 
 //@property (strong, nonatomic) NSMutableArray *zeroRight;
-@property (strong, nonatomic) NSMutableArray *oneRight;
-@property (strong, nonatomic) NSMutableArray *twoRight;
-@property (strong, nonatomic) NSMutableArray *threeRight;
-@property (strong, nonatomic) NSMutableArray *winner;
-@property (strong, nonatomic) NSMutableArray *loser;
+//@property (strong, nonatomic) NSMutableArray *oneRight;
+//@property (strong, nonatomic) NSMutableArray *twoRight;
+//@property (strong, nonatomic) NSMutableArray *threeRight;
+//@property (strong, nonatomic) NSMutableArray *winner;
+//@property (strong, nonatomic) NSMutableArray *loser;
 
 @property (strong, nonatomic) IBOutlet UIImageView *darkGreyPeg;
 @property (strong, nonatomic) IBOutlet UIImageView *brownPeg;

@@ -59,7 +59,8 @@
 							<characters key="NSComponents">0.73 0.67 0.65 0.79 1</characters>
 						</object>
 						<nil key="IBUIHighlightedColor"/>
-						<int key="IBUIBaselineAdjustment">0</int>
+						<int key="IBUINumberOfLines">0</int>
+						<int key="IBUILineBreakMode">0</int>
 						<object class="IBUIFontDescription" key="IBUIFontDescription">
 							<string key="name">Futura-Medium</string>
 							<string key="family">Futura</string>
@@ -72,6 +73,7 @@
 							<int key="NSfFlags">16</int>
 						</object>
 						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
+						<double key="preferredMaxLayoutWidth">352</double>
 					</object>
 					<object class="IBUIImageView" id="530142484">
 						<reference key="NSNextResponder" ref="774585933"/>
@@ -1227,7 +1229,6 @@
 						<string key="NSFrame">{{529, 211}, {10, 10}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F59E9A8185E9A1D00364C23 /* DragView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F59E9A7185E9A1D00364C23 /* DragView.m */; };
 		3F7CE4F4185B8E790052A75F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F7CE4F3185B8E790052A75F /* UIKit.framework */; };
 		3F7CE4F6185B8E790052A75F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F7CE4F5185B8E790052A75F /* Foundation.framework */; };
 		3F7CE4F8185B8E790052A75F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F7CE4F7185B8E790052A75F /* CoreGraphics.framework */; };
@@ -39,6 +40,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F59E9A6185E9A1D00364C23 /* DragView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragView.h; sourceTree = "<group>"; };
+		3F59E9A7185E9A1D00364C23 /* DragView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragView.m; sourceTree = "<group>"; };
 		3F7CE4F0185B8E790052A75F /* Festermind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Festermind.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F7CE4F3185B8E790052A75F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3F7CE4F5185B8E790052A75F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -96,6 +99,8 @@
 				3F7CE4F9185B8E790052A75F /* Festermind */,
 				3F7CE4F2185B8E790052A75F /* Frameworks */,
 				3F7CE4F1185B8E790052A75F /* Products */,
+				3F59E9A6185E9A1D00364C23 /* DragView.h */,
+				3F59E9A7185E9A1D00364C23 /* DragView.m */,
 			);
 			sourceTree = "<group>";
 		};
@@ -264,6 +269,7 @@
 				3F7CE500185B8E790052A75F /* main.m in Sources */,
 				3F7CE504185B8E790052A75F /* AppDelegate.m in Sources */,
 				3F7CE50D185B8E790052A75F /* ViewController.m in Sources */,
+				3F59E9A8185E9A1D00364C23 /* DragView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +394,7 @@
 				3F7CE515185B8E790052A75F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
