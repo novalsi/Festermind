@@ -1168,6 +1168,86 @@
 					</object>
 					<int key="connectionID">547</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">hole11</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="715879934"/>
+					</object>
+					<int key="connectionID">548</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">hole12</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="938796298"/>
+					</object>
+					<int key="connectionID">549</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">hole13</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="42066429"/>
+					</object>
+					<int key="connectionID">550</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">hole14</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="786847606"/>
+					</object>
+					<int key="connectionID">551</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">dot11</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="259733233"/>
+					</object>
+					<int key="connectionID">552</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">dot12</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="550200818"/>
+					</object>
+					<int key="connectionID">553</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">dot13</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="196392758"/>
+					</object>
+					<int key="connectionID">554</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">dot14</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="934327455"/>
+					</object>
+					<int key="connectionID">555</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">insultLabel</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="440887804"/>
+					</object>
+					<int key="connectionID">556</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">goButton</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="372477269"/>
+					</object>
+					<int key="connectionID">557</int>
+				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<array key="orderedObjects">
@@ -1826,7 +1906,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">547</int>
+			<int key="maxID">557</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -1834,7 +1914,15 @@
 					<string key="className">ViewController</string>
 					<string key="superclassName">UIViewController</string>
 					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="dot11">UIImageView</string>
+						<string key="dot12">UIImageView</string>
+						<string key="dot13">UIImageView</string>
+						<string key="dot14">UIImageView</string>
 						<string key="goButton">UIImageView</string>
+						<string key="hole11">UIImageView</string>
+						<string key="hole12">UIImageView</string>
+						<string key="hole13">UIImageView</string>
+						<string key="hole14">UIImageView</string>
 						<string key="insultLabel">UILabel</string>
 						<string key="masterHole1">UIImageView</string>
 						<string key="masterHole2">UIImageView</string>
@@ -1842,8 +1930,40 @@
 						<string key="masterHole4">UIImageView</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="dot11">
+							<string key="name">dot11</string>
+							<string key="candidateClassName">UIImageView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="dot12">
+							<string key="name">dot12</string>
+							<string key="candidateClassName">UIImageView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="dot13">
+							<string key="name">dot13</string>
+							<string key="candidateClassName">UIImageView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="dot14">
+							<string key="name">dot14</string>
+							<string key="candidateClassName">UIImageView</string>
+						</object>
 						<object class="IBToOneOutletInfo" key="goButton">
 							<string key="name">goButton</string>
+							<string key="candidateClassName">UIImageView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="hole11">
+							<string key="name">hole11</string>
+							<string key="candidateClassName">UIImageView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="hole12">
+							<string key="name">hole12</string>
+							<string key="candidateClassName">UIImageView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="hole13">
+							<string key="name">hole13</string>
+							<string key="candidateClassName">UIImageView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="hole14">
+							<string key="name">hole14</string>
 							<string key="candidateClassName">UIImageView</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="insultLabel">

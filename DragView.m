@@ -12,8 +12,8 @@
 @implementation DragView
 
 
--(id)initWithCoder:(NSCoder *)aDecoder {
-    self = [super initWithCoder:aDecoder];
+-(id)init:(NSCoder *)aDecoder {
+    self = [super init];
     application = [UIApplication sharedApplication];
     delegate = [application delegate];
     return self;
@@ -22,6 +22,7 @@
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     // No need to invoke |touchesBegan| on super
     NSLog(@"touchesBegan");
+
 //    NSData *archivedData = [NSKeyedArchiver archivedDataWithRootObject: self];
 //    DragView *imageCopy = [NSKeyedUnarchiver unarchiveObjectWithData: archivedData];
 //    [[self superview] addSubview:imageCopy];
@@ -37,7 +38,7 @@
 //    DragView *imageCopy = [NSKeyedUnarchiver unarchiveObjectWithData: archivedData];
 //    [[self superview] addSubview:imageCopy];
     
-    [self ifCollided];
+    [delegate.viewController ifCollided];
 }
 
 /*
@@ -46,15 +47,11 @@
 
 -(void)ifCollided{
     
-//    NSString *cheese = [[NSString alloc] init];
-//    cheese = @"delegate.viewController.hole11.frame";
-
 //    if(CGRectIntersectsRect(self.frame, delegate.viewController.hole11.frame))
 //    {
-//        delegate.viewController.hole11.frame = CGRectMake(delegate.viewController.hole11.frame.origin.x,
-//                                                          delegate.viewController.hole11.frame.origin.y,
-//                                                          32, 32);
-//        delegate.viewController.hole11.center = delegate.viewController.hole11.superview.center;
+        //delegate.viewController.hole11.frame = CGRectMake(delegate.viewController.hole11.frame.origin.x, delegate.viewController.hole11.frame.origin.y, 32, 32);
+//        self.center = delegate.viewController.hole11.superview.center;
+//        NSLog(@"collided");
 //        delegate.viewController.hole11.image = [UIImage imageNamed: @"bluePeg.png"];
 //  
 //    }

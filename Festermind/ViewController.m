@@ -19,7 +19,9 @@
 
 //@synthesize darkGreyPeg, brownPeg, redPeg, orangePeg, yellowPeg, greenPeg, bluePeg, lightGreyPeg;
 
-//@synthesize hole101, hole102, hole103, hole104, hole11, hole12, hole13, hole14, hole21, hole22, hole23, hole24, hole31, hole32, hole33, hole34, hole41, hole42, hole43, hole44, hole51, hole52, hole53, hole54, hole61, hole62, hole63, hole64, hole71, hole72, hole73, hole74, hole81, hole82, hole83, hole84, hole91, hole92, hole93, hole94, dot101, dot102, dot103, dot104, dot11, dot12, dot13, dot14, dot21, dot22, dot23, dot24, dot31, dot32, dot33, dot34, dot41, dot42, dot43, dot44, dot51, dot52, dot53, dot54, dot61, dot62, dot63, dot64, dot71, dot72, dot73, dot74, dot81, dot82, dot83, dot84, dot91, dot92, dot93, dot94;
+//@synthesize hole101, hole102, hole103, hole104;
+@synthesize hole11, hole12, hole13, hole14;
+//@synthesize hole21, hole22, hole23, hole24, hole31, hole32, hole33, hole34, hole41, hole42, hole43, hole44, hole51, hole52, hole53, hole54, hole61, hole62, hole63, hole64, hole71, hole72, hole73, hole74, hole81, hole82, hole83, hole84, hole91, hole92, hole93, hole94, dot101, dot102, dot103, dot104, dot11, dot12, dot13, dot14, dot21, dot22, dot23, dot24, dot31, dot32, dot33, dot34, dot41, dot42, dot43, dot44, dot51, dot52, dot53, dot54, dot61, dot62, dot63, dot64, dot71, dot72, dot73, dot74, dot81, dot82, dot83, dot84, dot91, dot92, dot93, dot94;
 
 
 
@@ -28,15 +30,16 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [self makePegs];
-    [self makeHoles];
-    [self hurlInsult];
+    //[self makeHoles];
     [self createMaster];
-    [self changeLabel];
+    [self hurlInsult];
     
+    [self changeLabel];
+    [self ifCollided];
 }
 
 -(void)makePegs{
-    NSMutableArray *pegs = [NSMutableArray arrayWithCapacity:8];
+    pegs = [NSMutableArray arrayWithCapacity:8];
     DragView *tempView = [[DragView alloc] init];
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"darkGreyPeg" ofType:@"png"];
 
@@ -106,59 +109,59 @@
 
 }
 
--(void)makeHoles{
-    
-    
-    NSMutableArray *turns = [[NSMutableArray alloc] initWithCapacity:10];
-    
-    NSMutableArray *turn0 = [[NSMutableArray alloc] initWithCapacity:8];
-    UIImageView *hole11 = [[UIImageView alloc] initWithFrame:CGRectMake(67, 99, 10, 10)]; [self.view addSubview:hole11];
-    
-    
-    [turns addObject:turn0];
-    
-    NSMutableArray *turn1 = [[NSMutableArray alloc] initWithCapacity:8];
-    
-    [turns addObject:turn1];
-    
-    NSMutableArray *turn2 = [[NSMutableArray alloc] initWithCapacity:8];
-    
-    [turns addObject:turn2];
-    
-    NSMutableArray *turn3 = [[NSMutableArray alloc] initWithCapacity:8];
-    
-    [turns addObject:turn3];
-    
-    NSMutableArray *turn4 = [[NSMutableArray alloc] initWithCapacity:8];
-    
-    [turns addObject:turn4];
-    
-    NSMutableArray *turn5 = [[NSMutableArray alloc] initWithCapacity:8];
-    
-    [turns addObject:turn5];
-    
-    NSMutableArray *turn6 = [[NSMutableArray alloc] initWithCapacity:8];
-    
-    [turns addObject:turn6];
-    
-    NSMutableArray *turn7 = [[NSMutableArray alloc] initWithCapacity:8];
-    
-    [turns addObject:turn7];
-    
-    NSMutableArray *turn8 = [[NSMutableArray alloc] initWithCapacity:8];
-    
-    [turns addObject:turn8];
-    
-    NSMutableArray *turn9 = [[NSMutableArray alloc] initWithCapacity:8];
-    
-    [turns addObject:turn9];
-
-}
+//-(void)makeHoles{
+//    
+//    
+//    turns = [[NSMutableArray alloc] initWithCapacity:10];
+//    
+//    turn0 = [[NSMutableArray alloc] initWithCapacity:8];
+//    UIImageView *hole11 = [[UIImageView alloc] initWithFrame:CGRectMake(67, 99, 10, 10)]; [self.view addSubview:hole11];
+//    
+//    
+//    [turns addObject:turn0];
+//    
+//    turn1 = [[NSMutableArray alloc] initWithCapacity:8];
+//    
+//    [turns addObject:turn1];
+//    
+//    turn2 = [[NSMutableArray alloc] initWithCapacity:8];
+//    
+//    [turns addObject:turn2];
+//    
+//    turn3 = [[NSMutableArray alloc] initWithCapacity:8];
+//    
+//    [turns addObject:turn3];
+//    
+//    turn4 = [[NSMutableArray alloc] initWithCapacity:8];
+//    
+//    [turns addObject:turn4];
+//    
+//    turn5 = [[NSMutableArray alloc] initWithCapacity:8];
+//    
+//    [turns addObject:turn5];
+//    
+//    turn6 = [[NSMutableArray alloc] initWithCapacity:8];
+//    
+//    [turns addObject:turn6];
+//    
+//    turn7 = [[NSMutableArray alloc] initWithCapacity:8];
+//    
+//    [turns addObject:turn7];
+//    
+//    turn8 = [[NSMutableArray alloc] initWithCapacity:8];
+//    
+//    [turns addObject:turn8];
+//    
+//    turn9 = [[NSMutableArray alloc] initWithCapacity:8];
+//    
+//    [turns addObject:turn9];
+//
+//}
 
 -(NSMutableArray *)createMaster{
-    NSMutableArray *masterArray = [[NSMutableArray alloc] initWithObjects:@"darkGrey", @"brown", @"red", @"orange", @"yellow",@"green",@"blue",@"lightGrey", nil];
+    masterArray = [[NSMutableArray alloc] initWithObjects:@"darkGrey", @"brown", @"red", @"orange", @"yellow",@"green",@"blue",@"lightGrey", nil];
     
-    NSMutableArray *masterCode = [[NSMutableArray alloc] initWithCapacity:8];
+    masterCode = [[NSMutableArray alloc] initWithCapacity:8];
     while ([masterArray count])
     {
         int index = arc4random()%[masterArray count];
@@ -175,12 +178,36 @@
     return masterArray;
 }
 
+-(NSMutableArray *)createGuesses{
+    guessArray = [[NSMutableArray alloc] initWithCapacity:4];
+    
+    //for testing
+    [guessArray addObject:@"blue"];
+    [guessArray addObject:@"darkGrey"];
+    [guessArray addObject:@"brown"];
+    [guessArray addObject:@"orange"];
+    
+    return guessArray;
+}
+
+-(void)checkMatches{
+    for (int guess = 0; guess < 4; guess++) {
+        
+//        NSLog("guess %d was %@",[createGuesses objectAtIndex:guess],guess)
+//    //
+//        for (int answer = 0; answer < 4; answer++) {
+//            if ([[self.guesses] objectAtIndex:guess] == @"blue") {
+//                NSLog(@"%d in guesses and %d in answer is blue",guess,answer);            }
+//        }
+    }
+}
+
 -(NSMutableArray *)initializeInsults{
     
-    NSMutableArray *insults = [NSMutableArray arrayWithCapacity:6];
+    insults = [NSMutableArray arrayWithCapacity:6];
     
     //insults to hurl if player has zero pegs correct and in the correct position
-    NSMutableArray *zeroRight = [[NSMutableArray alloc] initWithObjects:@"No wonder your wife left you.",
+    zeroRight = [[NSMutableArray alloc] initWithObjects:@"No wonder your wife left you.",
                                  @"You know this is a solved game, right?",
                                  @"This is just painful to watch.",
                                  @"I can't believe they let you out without mittens.",
@@ -215,7 +242,7 @@
                                  nil]; [insults addObject:zeroRight];
     
     //insults to hurl if player has one peg correct and in the correct position
-    NSMutableArray *oneRight = [[NSMutableArray alloc] initWithObjects:@"So, how colorblind are you?",
+    oneRight = [[NSMutableArray alloc] initWithObjects:@"So, how colorblind are you?",
                                 @"Good job, maybe one of your littermates can help with the rest.",
                                 @"Let me help: give up.",
                                 @"Is your house at the corner of 'walk' and 'don't walk?',"
@@ -235,7 +262,7 @@
                                 nil]; [insults addObject:oneRight];
     
     //insults to hurl if player has two pegs correct and in the correct position
-    NSMutableArray *twoRight = [[NSMutableArray alloc] initWithObjects:@"Halfway there ... I bet you hear that a lot.",
+    twoRight = [[NSMutableArray alloc] initWithObjects:@"Halfway there ... I bet you hear that a lot.",
                                 @"Unfortunately, there's no cheat codes for this game.",
                                 @"Did you know dogwood trees don't grow puppies?",
                                 @"Looks like nobody's fool is angling for an adoption!",
@@ -254,7 +281,7 @@
                                 nil]; [insults addObject:twoRight];
     
     //insults to hurl if player has three pegs correct and in the correct position
-    NSMutableArray *threeRight = [[NSMutableArray alloc] initWithObjects:@"I'm starting to think you might even pass the Turing test.",
+    threeRight = [[NSMutableArray alloc] initWithObjects:@"I'm starting to think you might even pass the Turing test.",
                                   @"It's hard to get the big picture on such a small screen.",
                                   @"Lucky you, you're almost not a loser.",
                                   @"Don't wrack your brain ... if such a thing is possible.",
@@ -273,7 +300,7 @@
                                   nil]; [insults addObject:threeRight];
     
     //insults to hurl if player has all their pegs correct and in the correct position
-    NSMutableArray *winnerText = [[NSMutableArray alloc] initWithObjects:@"Don't get so excited, it's just a game.",
+   winnerText = [[NSMutableArray alloc] initWithObjects:@"Don't get so excited, it's just a game.",
                                   @"Now you're nearly as human as I am.",
                                   @"You'll go far someday.  I hope you stay there.",
                                   @"It's nice, but you'll never be the man your mother is.",
@@ -293,7 +320,7 @@
                                   nil]; [insults addObject:winnerText];
     
     //insults to hurl if player does not have correct and in the correct position at the end of turn 10
-    NSMutableArray *loserText = [[NSMutableArray alloc] initWithObjects:@"Let's see what a correct answer would look like.",
+    loserText = [[NSMutableArray alloc] initWithObjects:@"Let's see what a correct answer would look like.",
                                  @"If there's ever a price on your head, take it.",
                                  @"Now, may I have the pleasure of your absence?",
                                  @"I'd explain how to win, but I don't have a crayon app.",
@@ -317,9 +344,12 @@
     NSMutableArray *i = [self initializeInsults];
     
     //set numCorrect and turnCount for testing
-    int numCorrect = 2;
-    int turnCount = 1;
-    NSString *angryText = [[NSString alloc] init];
+    //REMOVE FOR GAMEPLAY
+    numCorrect = 2;
+    turnCount = 1;
+    
+    
+    angryText = [[NSString alloc] init];
     NSUInteger insult;
 
 //    NSLog(@"%@",[[[self initializeInsults] objectAtIndex:0] objectAtIndex:insult]);
@@ -367,7 +397,7 @@
 }
 
 -(void)changeLabel{
-    insultLabel.text = [self hurlInsult];
+    insultLabel.text = angryText;
 }
 
 //-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
@@ -400,11 +430,37 @@
 //    
 //}
 
+
+/*
+ I would also move the collides from the dragview class and instead, loop
+ through your drawimage objects and check for intersection when they
+ click on the "move" button and do your processing in the viewcontroller,
+ do your scoring, throw your insults and put the items back (make the
+ gobutton an actual button and hook up an ibaction with it)
+ */
+
+
+
 /*
  checks if a dot was collided
  */
+
 -(void)ifCollided{
-//
+    for (DragView *view in pegs) {
+        if(CGRectIntersectsRect(view.frame, hole11.frame))
+        {
+            //delegate.viewController.hole11.frame = CGRectMake(delegate.viewController.hole11.frame.origin.x, delegate.viewController.hole11.frame.origin.y, 32, 32);
+            view.center = hole11.center;
+            NSLog(@"collided");
+            //        delegate.viewController.hole11.image = [UIImage imageNamed: @"bluePeg.png"];
+            //
+        }
+
+    }
+
+    
+    
+//  EARLY VERSION worked in v1
 //    
 //    if(CGRectIntersectsRect(darkGreyPeg.frame, hole11.frame))
 //    {

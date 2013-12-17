@@ -8,17 +8,37 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController {
+    NSMutableArray *pegs;
+    NSMutableArray *turns;
+    NSMutableArray *turn0;
+    NSMutableArray *turn1;
+    NSMutableArray *turn2;
+    NSMutableArray *turn3;
+    NSMutableArray *turn4;
+    NSMutableArray *turn5;
+    NSMutableArray *turn6;
+    NSMutableArray *turn7;
+    NSMutableArray *turn8;
+    NSMutableArray *turn9;
+    NSMutableArray *masterArray;
+    NSMutableArray *masterCode;
+    NSMutableArray *guessArray;
+    NSMutableArray *insults;
+    NSMutableArray *zeroRight;
+    NSMutableArray *oneRight;
+    NSMutableArray *twoRight;
+    NSMutableArray *threeRight;
+    NSMutableArray *winnerText;
+    NSMutableArray *loserText;
+    int numCorrect;
+    int turnCount;
+    NSString *angryText;
+}
 
 @property (strong, nonatomic) IBOutlet UILabel *insultLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *goButton;
 
-//@property (strong, nonatomic) NSMutableArray *zeroRight;
-//@property (strong, nonatomic) NSMutableArray *oneRight;
-//@property (strong, nonatomic) NSMutableArray *twoRight;
-//@property (strong, nonatomic) NSMutableArray *threeRight;
-//@property (strong, nonatomic) NSMutableArray *winner;
-//@property (strong, nonatomic) NSMutableArray *loser;
 
 //@property (strong, nonatomic) IBOutlet UIImageView *darkGreyPeg;
 //@property (strong, nonatomic) IBOutlet UIImageView *brownPeg;
@@ -29,15 +49,15 @@
 //@property (strong, nonatomic) IBOutlet UIImageView *bluePeg;
 //@property (strong, nonatomic) IBOutlet UIImageView *lightGreyPeg;
 
-//@property (strong, nonatomic) IBOutlet UIImageView *hole11;
-//@property (strong, nonatomic) IBOutlet UIImageView *hole12;
-//@property (strong, nonatomic) IBOutlet UIImageView *hole13;
-//@property (strong, nonatomic) IBOutlet UIImageView *hole14;
-//@property (strong, nonatomic) IBOutlet UIImageView *dot11;
-//@property (strong, nonatomic) IBOutlet UIImageView *dot12;
-//@property (strong, nonatomic) IBOutlet UIImageView *dot13;
-//@property (strong, nonatomic) IBOutlet UIImageView *dot14;
-//
+@property (strong, nonatomic) IBOutlet UIImageView *hole11;
+@property (strong, nonatomic) IBOutlet UIImageView *hole12;
+@property (strong, nonatomic) IBOutlet UIImageView *hole13;
+@property (strong, nonatomic) IBOutlet UIImageView *hole14;
+@property (strong, nonatomic) IBOutlet UIImageView *dot11;
+@property (strong, nonatomic) IBOutlet UIImageView *dot12;
+@property (strong, nonatomic) IBOutlet UIImageView *dot13;
+@property (strong, nonatomic) IBOutlet UIImageView *dot14;
+
 //@property (strong, nonatomic) IBOutlet UIImageView *hole21;
 //@property (strong, nonatomic) IBOutlet UIImageView *hole22;
 //@property (strong, nonatomic) IBOutlet UIImageView *hole23;
